@@ -14,7 +14,11 @@ using namespace std;
 #include "greaterthan.h"
 #include "or.h"
 #include "ternary.h"
-
+#include "negation.h"
+SubExpression::SubExpression(Expression* left)
+{
+    this->left = left;
+}
 SubExpression::SubExpression(Expression* left, Expression* right)
 {
     this->left = left;
@@ -32,11 +36,15 @@ Expression* SubExpression::parse()
     Expression* left;
     Expression* right;
     Expression* middle;
-    Expression* temp;
     char operation, paren;
     
     left = Operand::parse();
     cin >> operation;
+    if (operation == '!'){
+        cin >> paren;
+        return new Negation(left);
+    }
+    
     right = Operand::parse();
     cin >> paren;
     switch (operation)
@@ -65,10 +73,10 @@ Expression* SubExpression::parse()
             //where the symbols are reversed and the third operand represents
             //the condition.  The first operand is the value when true and the 
             //second value when false.
-            temp = right;
-            middle = temp;
+            middle = right;
             right = Operand::parse();
-            return new Ternary(right, left, middle);
+            cin >> paren;
+            return new Ternary(right, middle, left);
     }
     return 0;
 }

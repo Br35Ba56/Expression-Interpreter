@@ -1,0 +1,16 @@
+<program> -> <exp> , <assigns> ;
+<exp> -> ( <exp> <op> <exp> ) | '(' <exp> ':' <exp> '?' <exp> ')' |
+'(' <exp> '!' ') | <literal> | <variable>
+<assigns> -> <assigns> , <assign>
+<assign> -> <variable> = <literal>
+<op> -> '+' | '-' | '*' | '/' | '>' | '<' | '=' | '&' | '|'
+
+Note:
+-In the conditional expression operator, the symbols are reversed and the third
+ operand represents the condition. The first operand is the value when true and
+ the second the value when false
+-The logical operators use single symbols not
+ double, for example the and operator is & not &&
+-The negation operator ! is a postfix operator, not a prefix one
+-There are only three relational operators not the usual six and the operator
+ for equality is = not ==

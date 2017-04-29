@@ -7,6 +7,6 @@ public:
     }
     double evaluate()
     {
-       return right->evaluate() ? left->evaluate() : middle ->evaluate();
+       return right->evaluate() ? middle->evaluate() : left->evaluate();
     }
 };
