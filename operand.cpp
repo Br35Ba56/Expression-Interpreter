@@ -28,7 +28,7 @@ Expression* Operand::parse()
     {
         cin >> paren;
         return SubExpression::parse();
-    }
+    } 
     else
         return new Variable(parseName());
     return 0;
