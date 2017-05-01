@@ -18,3 +18,10 @@ double SymbolTable::lookUp(string variable) const
              return elements[i].value;
     return -1;
 }
+void SymbolTable::clear()
+{
+    elements.clear();
+}
+int SymbolTable::size(){
+    return elements.size();
+}

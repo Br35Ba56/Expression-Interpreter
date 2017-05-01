@@ -15,8 +15,21 @@ Note:
 -There are only three relational operators not the usual six and the operator
  for equality is = not ==
 
+Test Cases for Math
 
- Test Cases for Ternary
+((6*3)/ (3+a)),a = 2; Value = 3.6, Returned 3.6;
+(((4*b)/(3+7)) + (a-4)), b = 5, a = 6; Value = 4, Returned 4
+
+Test Cases for Booleans
+
+((a<b) | (b=a)), a = 4, b = 5; Value = 1, Returned 1
+((a<b) | (b=a)), a = 4, b = 4; Value = 1, Returned 1
+((a<b) | (a>b)), a = 6, b = 4; Value = 1, Returned
+(((a=b)!) & (b = c)), a = 3, b = 4, c = 3, d = 4;  Value = 0, Returned 0
+(((a=b)!) | (b = c)), a = 3, b = 4, c = 3, d = 4;  Value = 1, Returned 1
+((((a=b)!) | (b = c))!), a = 3, b = 4, c = 3, d = 4; Value = 0, Returned 0
+
+Test Cases for Ternary
 
 ((6*6) : (6+6) ? (a = b)),a = 3, b = 4; Value = 12, Returned 12
 ((6*6) : (6+6) ? (a = b)),a = 3, b = 3; Value = 36, Returned 36

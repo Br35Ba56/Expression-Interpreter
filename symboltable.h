@@ -2,6 +2,8 @@ class SymbolTable
 {
 public:
     SymbolTable() {}
+    void clear();
+    int size();
     void insert(string variable, double value);
     double lookUp(string variable) const;
 private:
