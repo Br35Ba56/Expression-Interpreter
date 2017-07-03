@@ -4,7 +4,7 @@ c++ project for Programming Languages Class.
 This program reads in the arithmetic expression and encodes the expression as a binary tree. After the expression has been read in, the variable assignments are read in and the variables, and their values are placed into the symbol table.  Finally the expression is evaluated recursively.
 
 Part of the program was written but only an incomplete version for evaluating mathematical expressions.
-My efforts extended this program to support reading a .txt file of expressions, and support for relational, logical, and conditional expression operators defined by the below Backus-Naur form grammer.
+My efforts extended this program to support reading a .txt file of expressions, and support for relational, logical, and conditional expression operators defined by the below Backus-Naur form grammar.
 
 ```
 <program> -> <exp> , <assigns> ; 
